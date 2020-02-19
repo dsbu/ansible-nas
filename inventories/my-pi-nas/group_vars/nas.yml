@@ -1,0 +1,43 @@
+##                       ._____.   .__
+##  _____    ____   _____|__\_ |__ |  |   ____             ____ _____    ______
+##  \__  \  /    \ /  ___/  || __ \|  | _/ __ \   ______  /    \\__  \  /  ___/
+##   / __ \|   |  \\___ \|  || \_\ \  |_\  ___/  /_____/ |   |  \/ __ \_\___ \
+##  (____  /___|  /____  >__||___  /____/\___  >         |___|  (____  /____  >
+##       \/     \/     \/        \/          \/               \/     \/     \/
+##     a n s i b l e - n a s      https://github.com/davestephens/ansible-nas
+
+# Add your all.yml config overrides to this file. See group_vars/all.yml for all possible settings.
+
+# Example options
+ansible_nas_hostname: pi-nas
+ansible_nas_timezone: America/Los Angeles
+
+
+#mount points
+samba_shares_root: /tank/media
+nfs_shares_root: /tank/media
+
+## Enable some applications
+heimdall_enabled: true
+portainer_enabled: true
+
+# Media Serving
+plex_enabled: true
+
+# Home Automation
+homeassistant_enabled: true
+mosquitto_enabled: true
+homebridge_enabled: true
+
+###
+### Docker
+###
+# Where you want Docker to store images
+docker_image_directory: "{{ docker_home }}/data"
+
+# Where you want Docker to store its container data.
+docker_home: /tank/docker
+
+# Docker storage driver, see https://docs.docker.com/storage/storagedriver/select-storage-driver/#supported-backing-filesystems
+# You might want to change this to ZFS, depending on your underlying filesystem.
+docker_storage_driver: zfs
