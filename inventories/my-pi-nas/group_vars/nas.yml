@@ -40,4 +40,5 @@ docker_home: /tank/docker
 
 # Docker storage driver, see https://docs.docker.com/storage/storagedriver/select-storage-driver/#supported-backing-filesystems
 # You might want to change this to ZFS, depending on your underlying filesystem.
-docker_storage_driver: overlay2
+docker_storage_driver: zfs
+#docker_storage_driver: overlay2
