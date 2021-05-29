@@ -1,6 +1,6 @@
 # Ansible NAS
 
-[![Build Status](https://img.shields.io/travis/com/davestephens/ansible-nas/master?logo=travis&style=flat-square)](https://travis-ci.com/davestephens/ansible-nas) [![Gitter chat](https://img.shields.io/gitter/room/ansible-nas/chat.svg?logo=gitter&style=flat-square)](https://gitter.im/Ansible-NAS/Chat) [![license](https://img.shields.io/github/license/DAVFoundation/api_doc.svg?style=flat-square)](https://github.com/davestephens/ansible-nas/blob/master/LICENSE) [![Ko-fi](https://img.shields.io/static/v1.svg?label=ko-fi&message=Buy%20Me%20A%20Coffee&color=orange&style=flat-square&logo=buy-me-a-coffee)](https://ko-fi.com/davestephens)
+[![CI](https://github.com/davestephens/ansible-nas/workflows/CI/badge.svg)](https://github.com/davestephens/ansible-nas/actions?query=workflow%3ACI) [![Gitter chat](https://img.shields.io/gitter/room/ansible-nas/chat.svg?logo=gitter&style=flat-square)](https://gitter.im/Ansible-NAS/Chat) [![license](https://img.shields.io/github/license/DAVFoundation/api_doc.svg?style=flat-square)](https://github.com/davestephens/ansible-nas/blob/master/LICENSE) [![Ko-fi](https://img.shields.io/static/v1.svg?label=ko-fi&message=Buy%20Me%20A%20Coffee&color=orange&style=flat-square&logo=buy-me-a-coffee)](https://ko-fi.com/davestephens)
 
 After getting burned by broken FreeNAS updates one too many times, I figured I
 could do a much better job myself using just a stock Ubuntu install, some clever
@@ -25,28 +25,31 @@ Ansible config and a bunch of Docker containers.
 * A Docker host with Portainer for image and container management
 * An automatic dynamic DNS updater if you use Cloudflare to host your domain DNS
 * A Personal finance manager
-* eBook management with calibre-web
+* eBook management with Calibre-web
 * Content management with Joomla
 * A dual panel local file manager
 * Self-service media request web application
-* SEO tracking with Serposcope
+* A PXE server to boot OS images over the network
 
 ### Available Applications
 
 * [Airsonic](https://airsonic.github.io/) - catalog and stream music
 * [Bazarr](https://github.com/morpheus65535/bazarr) - companion to Radarr and Sonarr for downloading subtitles
 * [Bitwarden_rs](https://github.com/dani-garcia/bitwarden_rs) - Self-Hosting port of password manager
-* [Calibre](https://hub.docker.com/r/linuxserver/calibre-web) - eBook Library
+* [Calibre-web](https://github.com/janeczku/calibre-web) - Provides a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
 * [Cloud Commander](https://cloudcmd.io/) - A dual panel file manager with integrated web console and text editor
 * [Cloudflare DDNS](https://hub.docker.com/r/joshuaavalon/cloudflare-ddns/) - automatically update Cloudflare with your IP address
 * [CouchPotato](https://couchpota.to/) - for downloading and managing movies
+* [Deluge](https://dev.deluge-torrent.org/) - A lightweight, Free Software, cross-platform BitTorrent client.
+* [DokuWiki](https://www.dokuwiki.org/) - A simple to use and highly versatile Open Source wiki software that doesn't require a database.
 * [Duplicati](https://www.duplicati.com/) - for backing up your stuff
 * [Emby](https://emby.media/) - Media streaming and management
 * [Firefly III](https://firefly-iii.org/) - Free and open source personal finance manager
 * [get_iplayer](https://github.com/get-iplayer/get_iplayer) - download programmes from BBC iplayer
-* [Gitea](https://gitea.io/en-us/) - Simple self-hosted Github clone
-* [Gitlab](https://about.gitlab.com/features/) - Self-hosted Github clone of the highest order
+* [Gitea](https://gitea.io/en-us/) - Simple self-hosted GitHub clone
+* [GitLab](https://about.gitlab.com/features/) - Self-hosted GitHub clone of the highest order
 * [Glances](https://nicolargo.github.io/glances/) - for seeing the state of your system via a web browser
+* [Gotify](https://gotify.net/) Self-hosted server for sending push notifications
 * [Grafana](https://github.com/grafana/grafana) - Dashboarding tool
 * [Guacamole](https://guacamole.apache.org/) - Web based remote desktop gateway, supports VNC, RDP and SSH
 * [Heimdall](https://heimdall.site/) - Home server dashboard
@@ -55,23 +58,29 @@ Ansible config and a bunch of Docker containers.
 * [Jackett](https://github.com/Jackett/Jackett) - API Support for your favorite torrent trackers
 * [Jellyfin](https://jellyfin.github.io) - The Free Software Media System
 * [Joomla](https://www.joomla.org/) - Open source content management system
+* [Krusader](https://krusader.org/) - Twin panel file management for your desktop
 * [Lidarr](https://github.com/lidarr/Lidarr) - Music collection manager for Usenet and BitTorrent users
-* [MiniDlna](https://sourceforge.net/projects/minidlna/) - simple media server which is fully compliant with DLNA/UPnP-AV clients
+* [MiniDLNA](https://sourceforge.net/projects/minidlna/) - simple media server which is fully compliant with DLNA/UPnP-AV clients
 * [Miniflux](https://miniflux.app/) - An RSS news reader
 * [Mosquitto](https://mosquitto.org) - An open source MQTT broker
+* [Mylar](https://github.com/evilhero/mylar) - An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents
 * [MyMediaForAlexa](https://www.mymediaalexa.com/) - Lets you stream your music collection to your alexa device
+* [n8n](https://n8n.io/) - Nodemation, a node based workflow and automation service like IFTTT.
+* [netboot.xyz](https://netboot.xyz/) - a PXE boot server
 * [Netdata](https://my-netdata.io/) - An extremely comprehensive system monitoring solution
 * [Nextcloud](https://nextcloud.com/) - A self-hosted Dropbox alternative
 * [NZBget](https://nzbget.net/) - The most efficient usenet downloader
 * [Ombi](https://ombi.io/) - web application that automatically gives your users the ability to request content
+* [Organizr](https://organizr.app/) - ORGANIZR aims to be your one stop shop for your Servers Frontend.
 * [openHAB](https://www.openhab.org/) - A vendor and technology agnostic open source automation software for your home
 * [Plex](https://www.plex.tv/) - Plex Media Server
 * [Portainer](https://portainer.io/) - for managing Docker and running custom images
 * [pyLoad](https://pyload.net/) - A download manager with a friendly web-interface
+* [PyTivo](http://pytivo.org) - An HMO and GoBack server for TiVos.
 * [Radarr](https://radarr.video/) - for organising and downloading movies
-* [Serposcope](https://serposcope.serphacker.com/en/) - tracker to monitor website ranking
 * [Sickchill](https://sickchill.github.io/) - for managing TV episodes
 * [Sonarr](https://sonarr.tv/) - for downloading and managing TV episodes
+* [Syncthing](https://syncthing.net/) - sync directories with another device
 * [Tautulli](http://tautulli.com/) - Monitor Your Plex Media Server
 * [Telegraf](https://github.com/influxdata/telegraf) - Metrics collection agent
 * [The Lounge](https://thelounge.chat) - Web based always-on IRC client
@@ -79,9 +88,11 @@ Ansible config and a bunch of Docker containers.
 * [Traefik](https://traefik.io/) - Web proxy and SSL certificate manager
 * [Transmission](https://transmissionbt.com/) - BitTorrent client (with OpenVPN if you have a supported VPN provider)
 * [Ubooquity](http://vaemendis.net/ubooquity/) - Book and comic server
+* [uTorrent](https://www.utorrent.com/) - The best torrent downloading app for beginners
 * [Virtual Desktop](https://github.com/RattyDAVE/docker-ubuntu-xrdp-mate-custom) - A virtual desktop running on your NAS.
 * [Wallabag](https://wallabag.org/) - Save and classify articles. Read them later.
 * [Watchtower](https://github.com/v2tec/watchtower) - Monitor your Docker containers and update them if a new version is available
+* [YouTubeDL-Material](https://github.com/Tzahi12345/YoutubeDL-Material) - Self-hosted YouTube downloader built on Material Design
 * [ZNC](https://wiki.znc.in/ZNC) - IRC bouncer to stay connected to favourite IRC networks and channels
 
 ## What This Could Do
@@ -127,7 +138,7 @@ Assuming that your Ubuntu system disk is separate from your storage (it should b
 ## Requirements
 
 * Ansible NAS targets the latest Ubuntu LTS release, which is currently Ubuntu
-  Server 18.04.3 LTS.
+  Server 20.04 LTS.
 * You can run Ansible-NAS on whatever you like, read the docs for more info. I
   use an HP Microserver.
 
@@ -136,7 +147,8 @@ Assuming that your Ubuntu system disk is separate from your storage (it should b
 Getting help is easy! You can:
 
 * Read the [docs](https://davestephens.github.io/ansible-nas)
-* Raise an [issue](https://github.com/davestephens/ansible-nas/issues)
+* Start a [discussion](https://github.com/davestephens/ansible-nas/discussions)
+* Raise an [issue](https://github.com/davestephens/ansible-nas/issues) if you think you've found a bug
 * Chat on [Gitter](https://gitter.im/Ansible-NAS/Chat)
 
 ## Contributing

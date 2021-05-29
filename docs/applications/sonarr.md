@@ -1,4 +1,4 @@
-# Sonarr & Radarr
+# Sonarr
 Homepages: [sonarr](https://sonarr.tv/) 
 
 **Sonarr** is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
@@ -19,4 +19,4 @@ Sonarr will get the file path from the Download client. On default settings with
 For Sonarr to understand that the `/tv` folder is a folder, you'll need to add a folder into it.
 You can also do this by adding a random series to the folder. Keep in mind to have the setting **Create empty movie folders** on **yes**
 
-For comprehensive configuration instructions see the [Sonarr github wiki](https://github.com/Sonarr/Sonarr/wiki)
+For comprehensive configuration instructions see the [Sonarr GitHub wiki](https://github.com/Sonarr/Sonarr/wiki)

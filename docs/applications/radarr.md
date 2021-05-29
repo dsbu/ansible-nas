@@ -1,4 +1,4 @@
-# Sonarr & Radarr
+# Radarr
 Homepage: [radarr](https://radarr.video/)
 
 **Radarr** is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent.
@@ -18,4 +18,4 @@ Radarr will get the file path from the Download client. On default settings with
 For Radarr to understand that the `/movies` folder is a folder, you'll need to add a new subfolder into it.
 You can also do this by adding a random movie to the folder. Keep in mind to have the internal setting **Create empty movie folders** on **yes**
 
-Comprehensive setup information can be found on the [Radarr github wiki](https://github.com/Radarr/Radarr/wiki/Setup-Guide)
+Comprehensive setup information can be found on the [Radarr GitHub wiki](https://github.com/Radarr/Radarr/wiki/Setup-Guide)
